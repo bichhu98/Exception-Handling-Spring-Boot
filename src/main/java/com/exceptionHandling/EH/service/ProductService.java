@@ -21,7 +21,7 @@ public class ProductService {
 	
 	public Product findProduct(int id){
 		if(productRepository.findById(id).isEmpty()) {
-			throw new ProductIdNotFoundException("OOOOOO");
+			throw new ProductIdNotFoundException();
 		}
 		return productRepository.findById(id).get();
 	}
